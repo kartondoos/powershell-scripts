@@ -1,0 +1,33 @@
+#vraag Voeg een paar gebruikers toe in AD 
+Get-Command New-ADUser –Syntax #info over het commando
+#antwoord
+New-ADUser ik.ben.een.ad.user
+
+#sourse : https://blog.netwrix.com/2018/06/07/how-to-create-new-active-directory-users-with-powershell/
+
+
+
+#vraag Voeg een paar OU’s toe in AD 
+Get-Command New-ADOrganizationalUnit –Syntax #info over het commando
+#antwoord
+New-ADOrganizationalUnit -Name "UserAccounts" -Path "DC=FABRIKAM,DC=COM"
+
+#sourse : https://docs.microsoft.com/en-us/powershell/module/activedirectory/new-adorganizationalunit?view=windowsserver2019-ps
+
+
+
+#vraag Voeg een paar A records toe in DNS
+Get-Command Add-DnsServerResourceRecordA –Syntax #info over het commando
+#antwoord
+Add-DnsServerResourceRecordA -Name "host23" -ZoneName "contoso.com" -AllowUpdateAny -IPv4Address "172.18.99.23" -TimeToLive 01:00:00
+
+#sourse : https://docs.microsoft.com/en-us/powershell/module/dnsserver/add-dnsserverresourcerecorda?view=windowsserver2019-ps
+
+
+
+#vraag Voeg een reservering toe in DHCP 
+Get-Command Add-DhcpServerv4Reservation –Syntax #info over het commando
+#antwoord
+Add-DhcpServerv4Reservation -ScopeId 10.10.10.0 -IPAddress 10.10.10.8 -ClientId "F0-DE-F1-7A-00-5E" -Description "Reservation for Printer"
+
+#sourse : https://docs.microsoft.com/en-us/powershell/module/dhcpserver/add-dhcpserverv4reservation?view=windowsserver2019-ps 
